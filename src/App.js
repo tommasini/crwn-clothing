@@ -26,7 +26,7 @@ class App extends React.Component {
             id: snapShot.id,
             ...snapShot.data(),
           });
-          console.log(this.state);
+        
         });
       }
 
@@ -45,10 +45,10 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
-          <Route
+          <Route exact
             path="/signin"
             render={() =>
-              this.props.currentUser ? <Redirect to='/' /> :<SignInAndSignUpPage/>
+              this.props.setCurrentUser ? ( <Redirect to='/' />) : (<SignInAndSignUpPage/>)
             }
           />
         </Switch>

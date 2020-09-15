@@ -48,7 +48,7 @@ class App extends React.Component {
           <Route exact
             path="/signin"
             render={() =>
-              this.props.setCurrentUser ? ( <Redirect to='/' />) : (<SignInAndSignUpPage/>)
+              this.props.currentUser ? ( <Redirect to='/' />) : (<SignInAndSignUpPage/>)
             }
           />
         </Switch>
